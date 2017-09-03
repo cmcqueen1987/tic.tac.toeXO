@@ -1,4 +1,4 @@
 const element = document.createElement('div')
 element.id = 'myDiv'
-element.innerHTML = 'Hello World!'
+element.innerHTML = ''
 document.body.appendChild(element)
