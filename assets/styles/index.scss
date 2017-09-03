@@ -1,2 +1,58 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+title {
+  color: blue;
+}
+
+h1{
+  color: #663355;
+  font-size: 55px;
+  text-align: center;
+  font-family: "courier", bold;
+}
+
+
+nav {
+  text-align: center;
+}
+
+
+#gameboard {
+  width: 480px;
+  margin: auto;
+  padding: 30px;
+}
+
+.game-cell {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.box {
+  border: 1px solid black bold;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  font-size: 80px;
+  font-family: "courier";
+  color: green;
+  padding: 20px;
+
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 10%;
+  height: 20%;
+  float: left;
+  bottom: 34em;
+  left: +5%;
+  background-color: green;
+  box-shadow: 0 0 3px 1px #000;
+
+  text-align: center;
+  line-height: 2;
+}
