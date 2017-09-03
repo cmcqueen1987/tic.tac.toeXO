@@ -50,7 +50,7 @@ const onNewGame = function () {
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
   $('#game-text').text('New game!')
-  //turnCount = 0
+
   // Create an array to represent the game-board
   $('.game-cell').each(function () {
     $(this).text('')
