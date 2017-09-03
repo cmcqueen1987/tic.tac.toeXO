@@ -2,9 +2,6 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
-const api = require('./api')
-const events = require('./events')
-const ui = require('./ui')
 
 require('./example')
 
