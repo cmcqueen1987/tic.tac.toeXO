@@ -165,7 +165,6 @@ const winDiagonal = function () {
     return false
   }
 }
-
 const checkWinner = function () {
   if (winDiagonal() || winColumn() || winRow()) {
     if (player1) {
@@ -188,4 +187,15 @@ require('./example')
 
 module.exports = {
   checkWinner
+
 }
+
+// use require with a reference to bundle the file and use it in this file
+// const example = require('./example')
+const authEvents = require('./auth/events.js')
+// use require without a reference to ensure a file is bundled
+// require('./example')
+
+$(() => {
+  authEvents.addHandlers()
+})
