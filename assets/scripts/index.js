@@ -148,9 +148,9 @@ const winRow = function () {
 
 const winColumn = function () {
   if (
-    $('#0').text() === $('#3').text() && $('#3').text() === $('#6').text() && $('#0').text() !== '' ||
-    $('#1').text() === $('#4').text() && $('#4').text() === $('#7').text() && $('#1').text() !== '' ||
-    $('#2').text() === $('#5').text() && $('#5').text() === $('#8').text() && $('#2').text() !== '') {
+    ($('#0').text() === $('#3').text() && $('#3').text() === $('#6').text() && $('#0').text() !== '') ||
+    ($('#1').text() === $('#4').text() && $('#4').text() === $('#7').text() && $('#1').text() !== '') ||
+    ($('#2').text() === $('#5').text() && $('#5').text() === $('#8').text() && $('#2').text() !== '')) {
     return true
   } else {
     return false
@@ -158,8 +158,8 @@ const winColumn = function () {
 }
 const winDiagonal = function () {
   if (
-    $('#4').text() === $('#0').text() && $('#0').text() === $('#8').text() && $('#4').text() !== '' ||
-    $('#4').text() === $('#6').text() && $('#6').text() === $('#2').text() && $('#4').text() !== '') {
+    ($('#4').text() === $('#0').text() && $('#0').text() === $('#8').text() && $('#4').text() !== '') ||
+    ($('#4').text() === $('#6').text() && $('#6').text() === $('#2').text() && $('#4').text() !== '')) {
     return true
   } else {
     return false
@@ -167,18 +167,12 @@ const winDiagonal = function () {
 }
 const checkWinner = function () {
   if (winDiagonal() || winColumn() || winRow()) {
-    if (player1) {
-      $('.Winner').text('O Wins!!!!!!')
-      return true
-    } else {
-      if (!player1) {
-        $('.Winner').text('X Wins!!!!!!')
-        return false
-      }
-    }
+    $('.Winner').text('Player X Wins!')
+    return true
+  } else {
+    return false
   }
 }
-
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -187,15 +181,4 @@ require('./example')
 
 module.exports = {
   checkWinner
-
 }
-
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-const authEvents = require('./auth/events.js')
-// use require without a reference to ensure a file is bundled
-// require('./example')
-
-$(() => {
-  authEvents.addHandlers()
-})

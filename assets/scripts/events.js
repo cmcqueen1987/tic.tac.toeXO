@@ -58,7 +58,7 @@ const onNewGame = function () {
 }
 
 $('#button game-new').on('click', function (event) {
-event.preventDefault()
+  event.preventDefault()
 })
 
 const addHandlers = () => {
