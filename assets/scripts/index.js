@@ -165,14 +165,21 @@ const winDiagonal = function () {
     return false
   }
 }
+
 const checkWinner = function () {
   if (winDiagonal() || winColumn() || winRow()) {
-    $('.Winner').text('Player X Wins!')
-    return true
-  } else {
-    return false
+    if (player1) {
+      $('.Winner').text('O Wins!!!!!!')
+      return true
+    } else {
+      if (!player1) {
+        $('.Winner').text('X Wins!!!!!!')
+        return false
+      }
+    }
   }
 }
+
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
