@@ -168,11 +168,11 @@ const winDiagonal = function () {
 const checkWinner = function () {
   if (winDiagonal() || winColumn() || winRow()) {
     if (player1) {
-      $('.Winner').text('O Wins!!!!!!')
+      $('.Winner').text('O Wins!!!!!')
       return true
     } else {
       if (!player1) {
-        $('.Winner').text('X Wins!!!!!!')
+        $('.Winner').text('X Wins!!!!!')
         return false
       }
     }
