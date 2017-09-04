@@ -1,8 +1,2 @@
-API="${API_ORIGIN:-https://ga-library-api.herokuapp.com}"
- URL_PATH="/sign-out/$ID"
-
-curl "${API}${URL_PATH}" \
-  --include \
-  --request DELETE \
+curl --include --request DELETE http://localhost:3000/sign-out/$ID \
   --header "Authorization: Token token=$TOKEN"
-echo

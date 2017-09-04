@@ -42,23 +42,23 @@ const onChangePassword = function (event) {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-const onNewGame = function () {
-  event.preventDefault()
-  console.log('hellllo')
-  const data = {}
-  api.newGame(data)
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
-  $('#game-text').text('New game!')
-  //turnCount = 0
-  // Create an array to represent the game-board
-  $('.game-cell').each(function () {
-    $(this).text('')
-  })
-}
+// const onNewGame = function () {
+// event.preventDefault()
+// console.log('hellllo')
+// const data = {}
+// api.newGame(data)
+// .then(ui.newGameSuccess)
+// .catch(ui.newGameFailure)
+// $('#game-text').text('New game!')
+// turnCount = 0
+// Create an array to represent the game-board
+// $('.game-cell').each(function () {
+// $(this).text('')
+// })
+// }
 
 $('#button game-new').on('click', function (event) {
-event.preventDefault()
+  event.preventDefault()
 })
 
 const addHandlers = () => {
@@ -66,7 +66,6 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
-  $('#button game-new').on('click', onNewGame)
 }
 
 module.exports = {

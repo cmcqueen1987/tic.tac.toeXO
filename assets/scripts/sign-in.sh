@@ -1,15 +1,5 @@
-API="${API_ORIGIN:-https://ga-library-api.herokuapp.com}"
- URL_PATH="/sign-in"
-
-curl "${API}${URL_PATH}" \
+curl "https://aqueous-atoll-85096.herokuapp.com" \
   --include \
   --request POST \
-  --header "Content-Type: application/x-www-form-urlencoded" \
-  --data-urlencode '{
-    "credentials": {
-      "email": "'"${EMAIL}"'"
-      "password": "'"${PASSWORD}"'"
-    }
-  }'
-
-echo
+  --data-urlencode "credentials[email]=$EMAIL" \
+  --data-urlencode "credentials[password]=$PASSWORD"
