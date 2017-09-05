@@ -135,50 +135,39 @@ $(() => {
   })
 })
 
-const winRow = function () {
+const checkWinner = function () {
   if (
     ($('#0').text() === $('#1').text() && $('#1').text() === $('#2').text() && $('#0').text() !== '') ||
     ($('#3').text() === $('#4').text() && $('#4').text() === $('#5').text() && $('#3').text() !== '') ||
-    ($('#6').text() === $('#7').text() && $('#7').text() === $('#8').text() && $('#6').text() !== '')) {
-    return true
-  } else {
-    return false
-  }
-}
-
-const winColumn = function () {
-  if (
+    ($('#6').text() === $('#7').text() && $('#7').text() === $('#8').text() && $('#6').text() !== '') ||
     ($('#0').text() === $('#3').text() && $('#3').text() === $('#6').text() && $('#0').text() !== '') ||
     ($('#1').text() === $('#4').text() && $('#4').text() === $('#7').text() && $('#1').text() !== '') ||
-    ($('#2').text() === $('#5').text() && $('#5').text() === $('#8').text() && $('#2').text() !== '')) {
-    return true
-  } else {
-    return false
-  }
-}
-const winDiagonal = function () {
-  if (
-    ($('#4').text() === $('#0').text() && $('#0').text() === $('#8').text() && $('#4').text() !== '') ||
-    ($('#4').text() === $('#6').text() && $('#6').text() === $('#2').text() && $('#4').text() !== '')) {
-    return true
-  } else {
-    return false
-  }
-}
-const checkWinner = function () {
-  if (winDiagonal() || winColumn() || winRow()) {
-    if (player1) {
-      $('.Winner').text('O Wins!!!!!')
-      return true
-    } else {
-      if (!player1) {
-        $('.Winner').text('X Wins!!!!!')
-        return false
-      }
-    }
-  }
-}
+    ($('#2').text() === $('#5').text() && $('#5').text() === $('#8').text() && $('#2').text() !== '') ||
+    ($('#0').text() === $('#4').text() && $('#4').text() === $('#8').text() && $('#0').text() !== '') ||
+    ($('#2').text() === $('#4').text() && $('#4').text() === $('#6').text() && $('#2').text() !== '')
+  ) {
+    $('h2').html('Winner!')
+    $('.boxed').text('Click Start New Game to play again!')
 
+    return true
+
+  } else if (
+    $('#0').text() !== '' &&
+    $('#1').text() !== '' &&
+    $('#2').text() !== '' &&
+    $('#3').text() !== '' &&
+    $('#4').text() !== '' &&
+    $('#5').text() !== '' &&
+    $('#6').text() !== '' &&
+    $('#7').text() !== '' &&
+    $('#8').text() !== ''
+) {
+    $('h2').html('Tie!')
+    $('.boxed').text('Click Start New Game to play again!')
+
+    return false
+  }
+}
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
