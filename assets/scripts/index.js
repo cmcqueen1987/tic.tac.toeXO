@@ -150,7 +150,6 @@ const checkWinner = function () {
     $('.boxed').text('Click Start New Game to play again!')
 
     return true
-
   } else if (
     $('#0').text() !== '' &&
     $('#1').text() !== '' &&
@@ -161,7 +160,7 @@ const checkWinner = function () {
     $('#6').text() !== '' &&
     $('#7').text() !== '' &&
     $('#8').text() !== ''
-) {
+  ) {
     $('h2').html('Tie!')
     $('.boxed').text('Click Start New Game to play again!')
 

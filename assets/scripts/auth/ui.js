@@ -9,8 +9,8 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function (error) {
-  console.log('not working')
   console.error(error)
+  $('#message').text('Error, Please try again!')
 }
 
 const signInSuccess = function (data) {
@@ -56,5 +56,4 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure
-
 }
