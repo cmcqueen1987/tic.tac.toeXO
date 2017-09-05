@@ -5,6 +5,9 @@
 <h3>Link To Play!</h3>
 https://cmcqueen1987.github.io/tic.tac.toeXO/
 
+<h3>Game Project Wireframe!</h3>
+https://user-images.githubusercontent.com/29021990/30065886-4cd08e5a-9224-11e7-9dbb-98ba774e3f79.jpg
+
 <h3>Steps Taken to Complete the Game</h3>
     <li>Drew up a couple different wireframes to prep for my page design.</li>
     <li>Wireframes include main page as well as a login pop up box. My final project unfortunately did not look exactly like my wireframe as I did not include pop up boxes for logging in and signing up, but my main design did come out nicely and resembled my orginal wireframe design.</li>
@@ -43,7 +46,7 @@ https://cmcqueen1987.github.io/tic.tac.toeXO/
   <li>AJAX</li>
   <li>sass</li>
   <li>Game API</li>
-  
+
 <h3>Unsolved Problems</h3>
 <li> Clearboard function</li>
 <li> Support Multiple Games</li>
