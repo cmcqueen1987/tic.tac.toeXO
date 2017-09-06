@@ -47,6 +47,13 @@ const changePasswordFailure = function (error) {
   $('#message').text('Error, on change password')
 }
 
+const newGameSuccess = (data) => {
+  store.game = data.game
+  console.log(store.game.id)
+  console.log(data)
+  console.log('new game created')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -55,6 +62,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
-
+  changePasswordFailure,
+  newGameSuccess
 }
