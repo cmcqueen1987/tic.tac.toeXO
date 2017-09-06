@@ -2,15 +2,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 title {
-  color: blue;
+  color: #0000ff;
 }
 
-h1{
+h1 {
   color: #663355;
+  font-family: 'courier', bold;
   font-size: 55px;
   text-align: center;
-  font-family: "courier", bold;
-}
+  }
 
 
 nav {
@@ -18,41 +18,38 @@ nav {
 }
 
 
-#gameboard {
-  width: 480px;
+.gameboard {
   margin: auto;
   padding: 30px;
-}
+  width: 480px;
+  }
 
 .game-cell {
-  width: 150px;
-  height: 150px;
   border: 2px solid black;
+  height: 150px;
+  width: 150px;
 }
 
 .box {
-  border: 1px solid black bold;
-  height: 150px;
-  width: 150px;
-  text-align: center;
+  border: 1px bold;
+  font-family: 'courier';
   font-size: 80px;
-  font-family: "courier";
-  color: green;
+  height: 150px;
   padding: 20px;
-
+  text-align: center;
+  width: 150px;
 }
 
 .button {
-  display: inline-block;
-  position: relative;
-  width: 10%;
-  height: 20%;
-  float: left;
+  background-color: #008000;
   bottom: 34em;
-  left: +5%;
-  background-color: green;
-  box-shadow: 0 0 3px 1px #000;
-
-  text-align: center;
+  box-shadow: 0 0 3px 1px;
+  display: inline-block;
+  float: left;
+  height: 20%;
+  left: + 5%;
   line-height: 2;
-}
+  position: relative;
+  text-align: center;
+  width: 10%;
+  }

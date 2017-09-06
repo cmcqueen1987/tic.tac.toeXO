@@ -1,11 +1,16 @@
-curl "http://tic-tac-toe.wdibos.com/sign-up" \
+API="${API_ORIGIN:-}"
+URL_PATH="/sign-up"
+
+curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
   --data '{
-    "credentials": {
-      "email": "'"${EMAIL}"'",
-      "password": "'"${PASSWORD}"'",
-      "password_confirmation": "'"${PASSWORD}"'"
-    }
-  }'
+      "credentials": {
+        "email": "'"${EMAIL}"'",
+        "password": "'"${PASSWORD}"'",
+        "password_confirmation": "'"${PASSWORD}"'"
+      }
+    }'
+
+echo
