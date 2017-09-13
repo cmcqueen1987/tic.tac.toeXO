@@ -11,6 +11,7 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (error) {
   console.log('not working')
   console.error(error)
+  $('#message').text('Error on Sign-Up, Please Try Again')
 }
 
 const signInSuccess = function (data) {
@@ -18,11 +19,13 @@ const signInSuccess = function (data) {
   console.log('Successfully Signed In!')
   $('#message').text('Successfully Signed In!')
   store.user = data.user
+
+  $('.gameboard').removeClass('hidden')
 }
 
 const signInFailure = function (error) {
   console.error(error)
-  $('#message').text('Error, Please try again!')
+  $('#message').text('Error on Sign-In, Please Try Again')
 }
 
 const signOutSuccess = function (data) {
@@ -33,7 +36,7 @@ const signOutSuccess = function (data) {
 
 const signOutFailure = function (error) {
   console.error(error)
-  $('#message').text('Error Signing Out!')
+  $('#message').text('Error Signing Out')
 }
 
 const changePasswordSuccess = function (data) {
@@ -44,7 +47,7 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function (error) {
   console.error(error)
-  $('#message').text('Error, on change password')
+  $('#message').text('Error on Change Password, Please Try Again')
 }
 
 const newGameSuccess = (data) => {

@@ -41,22 +41,6 @@ $(() => {
     }
   }
 
-  const clearBoard = function () {
-    if (
-    ($('#0').text() !== '') &&
-    ($('#1').text() !== '') &&
-    ($('#2').text() !== '') &&
-    ($('#3').text() !== '') &&
-    ($('#4').text() !== '') &&
-    ($('#5').text() !== '') &&
-    ($('#6').text() !== '') &&
-    ($('#7').text() !== '') &&
-    ($('#8').text() !== '')
-) {
-  $('.gameBoard').on('click', clearBoard)
-  return true
-}
-
   $('#0').on('click', function () {
     $('#0').text()
     if ($('#0').text() === 'X' || $('#0').text() === 'O') {
