@@ -20,7 +20,13 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#message').text('Successfully Signed In!')
   $('#sign-in').trigger('reset')
-
+  $('#sign-up').show()
+  $('#sign-in').show()
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#new-game').show()
+  $('#get-games').show()
+  $('.gameboard').show()
   $('.gameboard').removeClass('hidden')
 }
 
@@ -34,6 +40,17 @@ const signOutSuccess = function (data) {
   console.log(data)
   console.log('Successfully Signed Out!')
   $('#message').text('Successfully Signed Out!')
+  $('#sign-up').show()
+  $('#sign-in').show()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#new-game').hide()
+  $('#get-games').hide()
+  $('.gameboard').hide()
+  $('h2').html('Winner!').hide()
+  $('.boxed').text('Click Start New Game to play again!').hide()
+  $('h2').html('Tie!').hide()
+  $('.boxed').text('Click Start New Game to play again!').hide()
 }
 
 const signOutFailure = function (error) {
