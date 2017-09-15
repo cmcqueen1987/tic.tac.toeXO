@@ -43,28 +43,47 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-const onNewGame = function () {
+const onNewGame = function (event) {
   event.preventDefault()
-  console.log('hellllo')
-  const data = {}
+  console.log('new game!')
+  const data = getFormFields(event.target)
   api.newGame(data)
     .then(ui.newGameSuccess)
     .catch(ui.newGameFailure)
-  $('#game-text').text('New game!')
-  $('.game-cell').each(function () {
-    $(this).text('')
-  })
 }
 
-$('#button game-new').on('click', function (event) {
+const onGetGames = function (event) {
   event.preventDefault()
-})
+  console.log('Get total games')
+  api.totalGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure)
+}
+
+// const onNewGame = function () {
+// event.preventDefault()
+// console.log('hellllo')
+// const data = {}
+// api.newGame(data)
+// .then(ui.newGameSuccess)
+// .catch(ui.newGameFailure)
+// $('#game-text').text('New game!')
+// $('.game-cell').each(function () {
+// $(this).text('')
+// })
+// }
+
+// $('#button game-new').on('click', function (event) {
+// event.preventDefault()
+// })
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
+  $('#new-game').on('click', onNewGame)
+  $('#get-games').on('click', onGetGames)
   $('#button game-new').on('click', onNewGame)
 }
 

@@ -6,19 +6,20 @@ const signUpSuccess = function (data) {
   console.log(data)
   console.log('Successfully Signed up!')
   $('#message').text('Successfully Signed Up!')
+  $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function (error) {
   console.log('not working')
   console.error(error)
   $('#message').text('Error on Sign-Up, Please Try Again')
+  $('#sign-up').trigger('reset')
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully Signed In!')
-  $('#message').text('Successfully Signed In!')
   store.user = data.user
+  $('#message').text('Successfully Signed In!')
+  $('#sign-in').trigger('reset')
 
   $('.gameboard').removeClass('hidden')
 }
@@ -26,6 +27,7 @@ const signInSuccess = function (data) {
 const signInFailure = function (error) {
   console.error(error)
   $('#message').text('Error on Sign-In, Please Try Again')
+  $('#sign-in').trigger('reset')
 }
 
 const signOutSuccess = function (data) {
@@ -43,18 +45,29 @@ const changePasswordSuccess = function (data) {
   console.log(data)
   console.log('Successfully Changed Password!')
   $('#message').text('Successfully Changed Password!')
+  $('#change-password').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
   console.error(error)
   $('#message').text('Error on Change Password, Please Try Again')
+  $('#change-password').trigger('reset')
 }
 
-const newGameSuccess = (data) => {
+const newGameSuccess = function (data) {
   store.game = data.game
-  console.log(store.game.id)
-  console.log(data)
-  console.log('new game created')
+  $('#message').text('New Game Started!')
+}
+
+const newGameFailure = function () {
+  $('#message').text('Error on creating a game')
+}
+
+const getGameSuccess = function (data) {
+  $('#totalGames').text(data)
+}
+
+const getGameFailure = function (response) {
 }
 
 module.exports = {
@@ -66,5 +79,8 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  newGameSuccess
+  newGameSuccess,
+  newGameFailure,
+  getGameSuccess,
+  getGameFailure
 }
