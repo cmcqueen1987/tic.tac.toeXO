@@ -52,7 +52,7 @@ const newGame = function (data) {
 
 const totalGames = function () {
   return $.ajax({
-    url: config.apiOrigin + '/games/?over=true',
+    url: config.apiOrigin + '/games/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token

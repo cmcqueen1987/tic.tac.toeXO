@@ -97,7 +97,7 @@ const newGameFailure = function () {
 }
 
 const getGamesSuccess = function (data) {
-  $('#totalGames').text(data)
+  $('h4').text('Total Games Played = ' + data.games.length).show()
   console.log(data)
 }
 
