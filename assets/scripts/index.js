@@ -19,8 +19,7 @@ $(() => {
       ($('#0').text() === $('#4').text() && $('#4').text() === $('#8').text() && $('#0').text() !== '') ||
       ($('#2').text() === $('#4').text() && $('#4').text() === $('#6').text() && $('#2').text() !== '')
     ) {
-      $('h2').html('Winner!')
-      $('.boxed').text('Click Start New Game to play again!')
+      $('h4').html('We have a WINNER! Click "Start New Game" to play again.').show()
 
       return true
     } else if (
@@ -34,8 +33,7 @@ $(() => {
       $('#7').text() !== '' &&
       $('#8').text() !== ''
     ) {
-      $('h2').html('Tie!')
-      $('.boxed').text('Click Start New Game to play again!')
+      $('h4').html('Tie Game! Please click Start New Game to try again.').show()
 
       return false
     }

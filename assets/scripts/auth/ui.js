@@ -20,14 +20,21 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#message').text('Successfully Signed In!')
   $('#sign-in').trigger('reset')
-  $('#sign-up').show()
-  $('#sign-in').show()
   $('#change-password').show()
   $('#sign-out').show()
   $('#new-game').show()
   $('#get-games').show()
   $('.gameboard').show()
   $('.gameboard').removeClass('hidden')
+  $('#0').text('')
+  $('#1').text('')
+  $('#2').text('')
+  $('#3').text('')
+  $('#4').text('')
+  $('#5').text('')
+  $('#6').text('')
+  $('#7').text('')
+  $('#8').text('')
 }
 
 const signInFailure = function (error) {
@@ -47,6 +54,8 @@ const signOutSuccess = function (data) {
   $('#new-game').hide()
   $('#get-games').hide()
   $('.gameboard').hide()
+  $('h4').html('We have a WINNER! Click "Start New Game" to play again.').hide()
+  $('h4').html('Tie Game! Please click Start New Game to try again.').hide()
 }
 
 const signOutFailure = function (error) {
@@ -79,7 +88,8 @@ const newGameSuccess = function (data) {
   $('#6').text('')
   $('#7').text('')
   $('#8').text('')
-  $('h2').html('Winner!').hide()
+  $('h4').html('We have a WINNER! Click "Start New Game" to play again.').hide()
+  $('h4').html('Tie Game! Please click Start New Game to try again.').hide()
 }
 
 const newGameFailure = function () {
