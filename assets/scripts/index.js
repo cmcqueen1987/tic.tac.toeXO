@@ -46,6 +46,9 @@ $(() => {
     if ($('#0').text() === 'X' || $('#0').text() === 'O') {
       return false
     }
+    if (checkWinner()) {
+      return false
+    }
     if (player1 === true) {
       $('#0').text('X')
     } else {
@@ -57,7 +60,10 @@ $(() => {
 
   $('#1').on('click', function () {
     $('#1').text()
-    if ($('#1').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#1').text() === 'X' || $('#1').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -71,7 +77,10 @@ $(() => {
 
   $('#2').on('click', function () {
     $('#2').text()
-    if ($('#2').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#2').text() === 'X' || $('#2').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -85,7 +94,10 @@ $(() => {
 
   $('#3').on('click', function () {
     $('#3').text()
-    if ($('#3').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#3').text() === 'X' || $('#3').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -99,7 +111,10 @@ $(() => {
 
   $('#4').on('click', function () {
     $('#4').text()
-    if ($('#4').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#4').text() === 'X' || $('#4').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -113,7 +128,10 @@ $(() => {
 
   $('#5').on('click', function () {
     $('#5').text()
-    if ($('#5').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#5').text() === 'X' || $('#5').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -127,7 +145,10 @@ $(() => {
 
   $('#6').on('click', function () {
     $('#6').text()
-    if ($('#6').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#6').text() === 'X' || $('#6').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -141,7 +162,10 @@ $(() => {
 
   $('#7').on('click', function () {
     $('#7').text()
-    if ($('#7').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#7').text() === 'X' || $('#7').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {
@@ -155,7 +179,10 @@ $(() => {
 
   $('#8').on('click', function () {
     $('#8').text()
-    if ($('#8').text() === 'X' || $('#0').text() === 'O') {
+    if ($('#8').text() === 'X' || $('#8').text() === 'O') {
+      return false
+    }
+    if (checkWinner()) {
       return false
     }
     if (player1 === true) {

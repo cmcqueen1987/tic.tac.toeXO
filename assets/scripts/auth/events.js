@@ -52,7 +52,7 @@ const onNewGame = function (event) {
     .catch(ui.newGameFailure)
 }
 
-const onGetGames = function (event) {
+const onTotalGames = function (event) {
   event.preventDefault()
   console.log('Get total games')
   api.totalGames()
@@ -83,7 +83,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#new-game').on('click', onNewGame)
-  $('#get-games').on('click', onGetGames)
+  $('#get-games').on('click', onTotalGames)
   $('#button game-new').on('click', onNewGame)
 }
 

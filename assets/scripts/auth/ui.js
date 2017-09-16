@@ -47,10 +47,6 @@ const signOutSuccess = function (data) {
   $('#new-game').hide()
   $('#get-games').hide()
   $('.gameboard').hide()
-  $('h2').html('Winner!').hide()
-  $('.boxed').text('Click Start New Game to play again!').hide()
-  $('h2').html('Tie!').hide()
-  $('.boxed').text('Click Start New Game to play again!').hide()
 }
 
 const signOutFailure = function (error) {
@@ -74,14 +70,25 @@ const changePasswordFailure = function (error) {
 const newGameSuccess = function (data) {
   store.game = data.game
   $('#message').text('New Game Started!')
+  $('#0').text('')
+  $('#1').text('')
+  $('#2').text('')
+  $('#3').text('')
+  $('#4').text('')
+  $('#5').text('')
+  $('#6').text('')
+  $('#7').text('')
+  $('#8').text('')
+  $('h2').html('Winner!').hide()
 }
 
 const newGameFailure = function () {
   $('#message').text('Error on creating a game')
 }
 
-const getGameSuccess = function (data) {
+const getGamesSuccess = function (data) {
   $('#totalGames').text(data)
+  console.log(data)
 }
 
 const getGameFailure = function (response) {
@@ -98,6 +105,6 @@ module.exports = {
   changePasswordFailure,
   newGameSuccess,
   newGameFailure,
-  getGameSuccess,
+  getGamesSuccess,
   getGameFailure
 }
