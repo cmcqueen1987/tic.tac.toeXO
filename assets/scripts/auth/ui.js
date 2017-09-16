@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const index = require('../index')
 
 const signUpSuccess = function (data) {
   console.log(data)
@@ -20,6 +21,8 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#message').text('Successfully Signed In!')
   $('#sign-in').trigger('reset')
+  $('#sign-in').hide()
+  $('#sign-up').hide()
   $('#change-password').show()
   $('#sign-out').show()
   $('#new-game').show()
@@ -88,6 +91,7 @@ const newGameSuccess = function (data) {
   $('#6').text('')
   $('#7').text('')
   $('#8').text('')
+  index.resetBoard = true
   $('h4').html('We have a WINNER! Click "Start New Game" to play again.').hide()
   $('h4').html('Tie Game! Please click Start New Game to try again.').hide()
 }

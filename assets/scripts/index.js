@@ -209,3 +209,10 @@ const authEvents = require('./auth/events.js')
 $(() => {
   authEvents.addHandlers()
 })
+
+const resetBoard = function () {
+  player1 = true
+}
+module.exports = {
+  resetBoard
+}
