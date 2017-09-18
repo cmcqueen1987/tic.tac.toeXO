@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <div id="game-text"></div>
+      <p id='message'></p>
+
+      <form id="sign-up">
+        <fieldset>
+          <input type ="text" name = "credentials[email]" placeholder="email">
+          <input type ="password" name = "credentials[password]" placeholder="password">
+          <input type ="password" name = "credentials[password_confirmation]" placeholder="password_confirmation">
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <form id="sign-in">
+        <fieldset>
+          <legend></legend>
+            <input type ="text" name = "credentials[email]" placeholder="email">
+            <input type ="password" name = "credentials[password]" placeholder="password">
+            <input type="submit" name="submit" value="Sign in!">
+          </fieldset>
+        </form>
+
+
+
+<h1>Chuck's Tic Tac Toe!</h1>
+
+
+    <h2></h2>
+    <h4></h4>
+
+
+<div class="boxed"></div>
+
+<div class="gameboard hidden">
+
+        <div class="row">
+          <div id="0" class="col-xs-4 box game-cell"></div>
+          <div id="1" class="col-xs-4 box game-cell"></div>
+          <div id="2" class="col-xs-4 box game-cell"></div>
+        </div>
+        <div class="row">
+          <div id="3" class="col-xs-4 box game-cell"></div>
+          <div id="4" class="col-xs-4 box game-cell"></div>
+          <div id="5" class="col-xs-4 box game-cell"></div>
+        </div>
+        <div class="row">
+          <div id="6" class="col-xs-4 box game-cell"></div>
+          <div id="7" class="col-xs-4 box game-cell"></div>
+          <div id="8" class="col-xs-4 box game-cell"></div>
+
+
+          <fieldset>
+          <form id="sign-out">
+          <fieldset>
+            <input type="submit" name="submit" value="Sign out!">
+          </fieldset>
+          </form>
+        </fieldset>
+
+          <form id="change-password">
+          <fieldset>
+          <input type ="password" name = "passwords[old]" placeholder="Old Password">
+          <input type ="password" name = "passwords[new]" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password!">
+          </fieldset>
+          </form>
+        </div>
+      </div>
+
+
+      <form id="new-game">
+              <fieldset>
+                <button type="submit" class="button game-new">Start New Game</button>
+              </fieldset>
+            </form>
+            <p>
+            </p>
+      <form id="get-games">
+            <fieldset>
+            <button type="submit" class="button game-new">Total Games Played</button>
+            <p id="totalGames"></p>
+            </fieldset>
+            </form>
+            <form id="update-game">
+      </form>
+
+   </body>
+
+</html>
