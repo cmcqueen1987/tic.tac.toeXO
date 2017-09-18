@@ -108,6 +108,12 @@ const getGamesSuccess = function (data) {
 const getGameFailure = function (response) {
 }
 
+const updateGameSuccess = function (data) {
+}
+
+const updateGameFailure = function () {
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -120,5 +126,7 @@ module.exports = {
   newGameSuccess,
   newGameFailure,
   getGamesSuccess,
-  getGameFailure
+  getGameFailure,
+  updateGameSuccess,
+  updateGameFailure
 }

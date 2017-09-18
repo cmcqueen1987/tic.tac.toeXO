@@ -60,22 +60,14 @@ const onTotalGames = function (event) {
     .catch(ui.getGamesFailure)
 }
 
-// const onNewGame = function () {
-// event.preventDefault()
-// console.log('hellllo')
-// const data = {}
-// api.newGame(data)
-// .then(ui.newGameSuccess)
-// .catch(ui.newGameFailure)
-// $('#game-text').text('New game!')
-// $('.game-cell').each(function () {
-// $(this).text('')
-// })
-// }
-
-// $('#button game-new').on('click', function (event) {
-// event.preventDefault()
-// })
+const onUpdateGame = function () {
+  event.preventDefault()
+  console.log('Game Updated')
+  const data = getFormFields(event.target)
+  api.updateGame(data)
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
+}
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -86,7 +78,7 @@ const addHandlers = () => {
   $('#get-games').on('click', onTotalGames)
   $('#button game-new').on('click', onNewGame)
 }
-
 module.exports = {
-  addHandlers
+  addHandlers,
+  onUpdateGame
 }
